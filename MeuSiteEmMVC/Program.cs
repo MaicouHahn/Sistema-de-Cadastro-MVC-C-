@@ -12,6 +12,7 @@ var connectionString = builder.Configuration.GetConnectionString("DataBase");
     options.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<IContatoRepositorio, ContatoRepositorio>(); //injeção de dependencia
+builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 
 var app = builder.Build();
 

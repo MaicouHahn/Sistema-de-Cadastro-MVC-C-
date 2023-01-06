@@ -4,9 +4,15 @@
 // Write your JavaScript code.
 
 $(document).ready(function () { //ele faz essa funçao assim que o site for lido
-    $('#table-contatos').DataTable({ //passado a tabela que tem os cadastros em views->contato->index.html
+  
+    getDataTable('#table-contatos');
+    getDataTable('#table-usuarios');
+});
+
+function getDataTable(id) {
+    $(id).DataTable({ //passado a tabela que tem os cadastros em views->contato->index.html
         //abaixo é passado os parametros de conteudo que essa paginaçao vai ter, ordenado,pesquisa etc, e tambem o idioma
-        
+
         "ordering": true,
         "paging": true,
         "searching": true,
@@ -34,8 +40,7 @@ $(document).ready(function () { //ele faz essa funçao assim que o site for lido
             }
         }
     });
-});
-
+}
 
 $('.close-alert').click(function () {
     $('.alert').hide('hide');
