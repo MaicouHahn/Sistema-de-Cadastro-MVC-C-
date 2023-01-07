@@ -13,6 +13,7 @@ namespace MeuSiteEmMVC.Repositorio
         public UsuarioModel Adicionar(UsuarioModel usuario)
         {
             usuario.DataCadastro = DateTime.Now;
+            usuario.setSenhaHash();
             _bancoContext.Usuarios.Add(usuario);//adiciona as informaçoes no banco
             _bancoContext.SaveChanges();//commita as informaçoes
             return usuario;
