@@ -1,9 +1,12 @@
-﻿using MeuSiteEmMVC.Models;
+﻿using MeuSiteEmMVC.Filters;
+using MeuSiteEmMVC.Models;
 using MeuSiteEmMVC.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MeuSiteEmMVC.Controllers
 {
+    [PaginaRestritaSomenteAdin]
+
     public class UsuarioController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
