@@ -12,20 +12,30 @@
     </div>
 }
 
-
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close"> X </button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
 <form asp-controller="Login" asp-action="Entrar" method="post">
     <!--<a href="/">Essa linha de cima Vai identificar o controller "Login" passar a açao que esta dentro do controller e dizer o tipo de metodo</a> -->
 
     <div class="form-group">
         <label for="Login">Login</label>
-        <input type="text" asp-for="Login" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <input type="text" asp-for="Login" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu Login">
         @Html.ValidationMessageFor(x=>x.Login)
     </div>
     <div class="form-group">
         <label for="senha">Senha</label>
-        <input type="password" asp-for="Senha" class="form-control" id="senha" placeholder="Password">
+        <input type="password" asp-for="Senha" class="form-control" id="senha" placeholder="Digite sua Senha">
         @Html.ValidationMessageFor(x=>x.Senha)
     </div>
     <br>
     <button type="submit" class="btn btn-primary w-100">Entrar</button>
+    <p class="mb-4 text-sm mx-auto">
+        Esqueceu sua senha?
+        <a asp-action="RedefinirSenha" asp-controller="Login" class="text-primary text-gradient font-weight-bold">Redefinir minha Senha</a>
+    </p>
 </form>
