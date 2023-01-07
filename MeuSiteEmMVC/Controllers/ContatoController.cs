@@ -68,7 +68,7 @@ namespace MeuSiteEmMVC.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _ContatoRepositorio.Adicionar(contato);
+                   contato= _ContatoRepositorio.Adicionar(contato);
                     TempData["MensagemSucesso"] = "Contato Cadastrado com Sucesso";
                     return RedirectToAction("Index");
                 }
@@ -85,17 +85,17 @@ namespace MeuSiteEmMVC.Controllers
         }
 
         [HttpPost] 
-        public IActionResult Alterar(ContatoModel contato)
+        public IActionResult Editar(ContatoModel contato)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    _ContatoRepositorio.Atualizar(contato);
+                    contato=_ContatoRepositorio.Atualizar(contato);
                     TempData["MensagemSucesso"] = "Contato alterado com Sucesso";
                     return RedirectToAction("Index");
                 }
-                return View("Editar", contato);
+                return View(contato);
             }
             catch (System.Exception erro)
             {

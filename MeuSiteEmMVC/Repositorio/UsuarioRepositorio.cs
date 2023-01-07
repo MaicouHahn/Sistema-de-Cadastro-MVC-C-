@@ -18,6 +18,11 @@ namespace MeuSiteEmMVC.Repositorio
             return usuario;
         }
 
+        public UsuarioModel BuscarPorLogin(string login)
+        {
+            return _bancoContext.Usuarios.FirstOrDefault(x => x.Login.ToUpper() == login.ToUpper());
+        }
+
         public bool Apagar(int id)
         {
             UsuarioModel usuarioDB = ListarPorId(id);
