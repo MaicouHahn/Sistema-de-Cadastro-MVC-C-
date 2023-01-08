@@ -36,5 +36,10 @@ namespace MeuSiteEmMVC.Models
             Senha = novaSenha.GerarHash();
             return novaSenha;
         }
+
+        public void setNovaSenha(string novaSenha)
+        {
+            Senha = novaSenha.GerarHash();
+        }
     }
 }

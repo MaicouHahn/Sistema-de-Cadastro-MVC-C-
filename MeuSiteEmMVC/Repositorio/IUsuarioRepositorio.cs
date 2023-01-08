@@ -12,6 +12,7 @@ namespace MeuSiteEmMVC.Repositorio
 
         UsuarioModel Atualizar(UsuarioModel usuario);
 
+        UsuarioModel AlterarSenha(AlterarSenhaModel usuario);
         bool Apagar(int id);
 
     }
