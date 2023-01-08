@@ -6,7 +6,7 @@ link(https://www.youtube.com/playlist?list=PLJ0IKu7KZpCQKdwRbU7HfXW3raImmghWZ)
 
 O meu intuito é aprender mais sobre arquitetura MVC .NET e C# para melhor entendimento da relação entre o Front-End e Back-End e também começar a entender aonde
 começa a entrar o banco de dados em um software. Esse projeto aborta todas essas etapas, desde a criação das Views e Models até a logica dos Controllers, CRUD com a Framework
-Entity e aborta também validações de campos orbrigatorios na area de um cadastro, tratamento de exeções e utilização de ferramentas do Front-End como CSS,HTML,Bootstrap 
+Entity e aborta também validações de campos obrigatorios na area de um cadastro, Sessões de usuario, Edição de cadastros e senhas, tratamento de exeções e um pouco de programação Front-End com CSS,HTML,Bootstrap 
 e JQuery.
 
 algumas fotos da ideia inicial do projeto
